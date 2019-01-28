@@ -7,9 +7,9 @@ from joblib import Parallel
 import random
 import os
 # l = open("trainHighRes.txt","rb").read().decode().split("\n")
-l = pickle.load(open("trainVid.p","rb"))
+l = pickle.load(open("validVid.p","rb"))
 # random.shuffle(l)
-#l = l[:10]
+l = l[:10]
 print(len(l))
 
 # l = ["test/deuKjxPCC68_000006_000016.mp4"]

@@ -9,7 +9,7 @@ from joblib import Parallel
 # l = pickle.load(open("validVid.p","rb"))
 # print(len(l))
 import glob
-folder_name = "outTrain10/*"
+folder_name = "tempValid10/*"
 files = glob.glob(folder_name)
 fl = len(folder_name) -1
 # l = ["test/deuKjxPCC68_000006_000016.mp4"]
@@ -54,7 +54,7 @@ def vid2img(i):
 # print(l[:3])
 status_lst = Parallel(n_jobs=32,backend="threading")(delayed(vid2img)(i) for i in files)
 import pickle
-pickle.dump(all_list,open("trainHyperTuple10.p","wb"))
+pickle.dump(all_list,open("validHyperTuple10.p","wb"))
 print(len(files),len(all_list))
 # for i in all_list:
 # 	print(i)

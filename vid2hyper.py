@@ -54,7 +54,7 @@ def vid2img(i):
 # print(l[:3])
 status_lst = Parallel(n_jobs=32,backend="threading")(delayed(vid2img)(i) for i in files)
 import pickle
-pickle.dump(all_list,open("validHyperTuple10.p","wb"))
+pickle.dump(all_list,open("tempValidHyperTuple10.p","wb"))
 print(len(files),len(all_list))
 # for i in all_list:
 # 	print(i)

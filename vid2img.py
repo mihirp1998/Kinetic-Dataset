@@ -9,7 +9,7 @@ import os
 # l = open("trainHighRes.txt","rb").read().decode().split("\n")
 l = pickle.load(open("validVid.p","rb"))
 # random.shuffle(l)
-l = l[:10]
+l = l[:100]
 print(len(l))
 
 # l = ["test/deuKjxPCC68_000006_000016.mp4"]
@@ -38,9 +38,9 @@ def vid2img(i):
 		ret, frame = cap.read()
 		if ret:
 			# cv2.imshow('capturing...', cv2.resize(frame, (0,0), fx=0.3, fy=0.3))
-			if(num>=11):
+			if(num>=15):
 				break
-			elif(num>=0 and num<11):	
+			elif(num>=0 and num<15):	
 
 				sav_path =  directory +'/frame{}_{:04d}.jpg'.format(name,num)
 				frame = cv2.resize(frame, (352,288))
